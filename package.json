@@ -1,0 +1,17 @@
+{
+  "name": "smk-scraper",
+  "type": "module",
+  "scripts": {
+    "scrape": "bun run src/app.ts"
+  },
+  "dependencies": {
+    "google-auth-library": "^9.15.0",
+    "google-spreadsheet": "^4.1.4",
+    "puppeteer-core": "^23.8.0",
+    "ts-retry": "^5.0.1"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
