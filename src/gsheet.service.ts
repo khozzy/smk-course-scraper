@@ -5,6 +5,7 @@ import {
 import { JWT } from "google-auth-library";
 import type { CourseData } from "./course";
 import { log } from "./log";
+
 export class GSheetService {
   private readonly doc: GoogleSpreadsheet;
 
