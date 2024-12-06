@@ -26,12 +26,13 @@ export class GSheetService {
       "Data rozpoczęcia",
       "Data zakończenia",
       "Miejscowość",
-      "Nr zgłoszenia",
-      "Dziedzina specjalizacji",
-      "Data zgłoszenia",
-      "Status zgłoszenia",
-      "Powód odrzucenia zgłoszenia",
-      "Nr zaświadczenia",
+      "Kurs EU",
+      "Czy kurs rozpoczęty?",
+      "Program specjalizacji",
+      "Płatność",
+      "Status kursu",
+      "Status terminu",
+      "Formularz zgłoszenia",
     ];
     await this.doc.loadInfo();
     log(`Updating Google Sheet ${this.doc.title} (${this.doc.spreadsheetId})`);
@@ -49,12 +50,13 @@ export class GSheetService {
       course.dataRozpoczecia,
       course.dataZakonczenia,
       course.miejscowosc,
-      course.nrZgloszenia,
-      course.dziedzinaSpecjalizacji,
-      course.dataZgloszenia,
-      course.statusZgloszenia,
-      course.powodOdrzuceniaZgloszenia,
-      course.nrZaswiadczenia,
+      course.kursEU,
+      course.czyKursRozpoczety,
+      course.programSpecjalizacji,
+      course.platnosc,
+      course.statusKursu,
+      course.statusTerminu,
+      course.formularzZgloszenia,
     ]);
 
     await sheet.addRows(rows);
@@ -68,8 +70,8 @@ export class GSheetService {
   }
 
   private async formatHeaderRow(sheet: GoogleSpreadsheetWorksheet) {
-    await sheet.loadCells("A1:K1");
-    for (let col = 0; col < 11; col++) {
+    await sheet.loadCells("A1:L1");
+    for (let col = 0; col < 12; col++) {
       const cell = sheet.getCell(0, col);
       cell.textFormat = { bold: true };
     }

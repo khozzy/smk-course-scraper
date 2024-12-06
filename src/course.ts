@@ -4,10 +4,11 @@ export interface CourseData {
   dataRozpoczecia: string;
   dataZakonczenia: string;
   miejscowosc: string;
-  nrZgloszenia: string;
-  dziedzinaSpecjalizacji: string;
-  dataZgloszenia: string;
-  statusZgloszenia: string;
-  powodOdrzuceniaZgloszenia: string;
-  nrZaswiadczenia: string;
+  kursEU: string;
+  czyKursRozpoczety: string;
+  programSpecjalizacji: string;
+  platnosc: string;
+  statusKursu: string;
+  statusTerminu: string;
+  formularzZgloszenia: string;
 }
